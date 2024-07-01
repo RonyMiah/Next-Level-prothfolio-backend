@@ -40,6 +40,14 @@ model project {
   @@map("projects")
 }
 
+model blog {
+  id      String @id @default(uuid())
+  title   String
+  content String
+
+  @@map("blogs")
+}
+
 enum userRole {
   SUPPER_ADMIN
   ADMIN

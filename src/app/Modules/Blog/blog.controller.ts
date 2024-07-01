@@ -1,0 +1,22 @@
+import httpStatus from "http-status";
+import catchAsync from "../../shared/catchAsync";
+import sendResponse from "../../shared/sendResponse";
+
+import { BlogService } from "./blog.service";
+
+
+
+const createBlog = catchAsync(async (req, res) => {
+  const result = await BlogService.createBlog(req.body);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Blog Created Successfully ',
+    data: result,
+  });
+});
+
+export const BlogControllers = {
+  createBlog,
+  
+};
