@@ -8,8 +8,14 @@ const createProject = async (payload: any) => {
     })
  return project
 };
+const getProject = async () => {
+
+    const data = await prisma.project.findMany()
+    return data
+};
 
 export const ProjectService = {
   createProject,
+  getProject
  
 };

@@ -12,5 +12,10 @@ router.post(
 //   validateRequest(userValidation.createUserSchemaValidation),
   BlogControllers.createBlog
 );
+router.get(
+  '/',
+//   validateRequest(userValidation.createUserSchemaValidation),
+  BlogControllers.getBlog
+);
 
 export const blogRouter = router;

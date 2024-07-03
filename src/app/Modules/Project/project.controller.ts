@@ -14,8 +14,18 @@ const createProject = catchAsync(async (req, res) => {
     data: result,
   });
 });
+const getProject = catchAsync(async (req, res) => {
+  const result = await ProjectService.getProject();
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Project Get Successfully ',
+    data: result,
+  });
+});
 
 export const ProjectControllers = {
   createProject,
+  getProject
   
 };

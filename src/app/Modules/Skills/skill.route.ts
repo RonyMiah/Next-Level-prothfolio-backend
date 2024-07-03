@@ -1,5 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express';
-import { ProjectControllers } from './project.controller';
+import { SkillControllers } from './skill.controller';
+
+
 
 
 
@@ -7,14 +9,14 @@ const router = express.Router();
 
 
 router.post(
-  '/create-project',
+  '/create-skill',
 //   validateRequest(userValidation.createUserSchemaValidation),
-  ProjectControllers.createProject
+  SkillControllers.createSkill
 );
 router.get(
   '/',
 //   validateRequest(userValidation.createUserSchemaValidation),
-  ProjectControllers.getProject
+  SkillControllers.getSkill
 );
 
-export const projectRouter = router;
+export const skillRouter = router;

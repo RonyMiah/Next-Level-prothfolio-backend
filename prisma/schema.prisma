@@ -47,6 +47,21 @@ model blog {
 
   @@map("blogs")
 }
+model skill {
+  id      String @id @default(uuid())
+  title   String
+  description String
+
+  @@map("skills")
+}
+model experince {
+  id      String @id @default(uuid())
+  title   String
+  desc String
+  thumbnail String
+
+  @@map("experinces")
+}
 
 enum userRole {
   SUPPER_ADMIN

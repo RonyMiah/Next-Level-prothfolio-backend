@@ -1,5 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express';
-import { ProjectControllers } from './project.controller';
+import { ExperienceControllers } from './experience.controller';
+
+
 
 
 
@@ -7,14 +9,14 @@ const router = express.Router();
 
 
 router.post(
-  '/create-project',
+  '/create-experience',
 //   validateRequest(userValidation.createUserSchemaValidation),
-  ProjectControllers.createProject
+  ExperienceControllers.createExperience
 );
 router.get(
   '/',
 //   validateRequest(userValidation.createUserSchemaValidation),
-  ProjectControllers.getProject
+  ExperienceControllers.getExperience
 );
 
-export const projectRouter = router;
+export const ExperienceRouter = router;
