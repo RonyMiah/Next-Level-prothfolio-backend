@@ -24,8 +24,21 @@ const getProject = catchAsync(async (req, res) => {
   });
 });
 
+const getSingleProject = catchAsync(async (req, res) => {
+  const {id} = req.params
+  // console.log(id)
+  const result = await ProjectService.getSingleProject(id);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'SingleProject Get Successfully ',
+    data: result,
+  });
+});
+
 export const ProjectControllers = {
   createProject,
-  getProject
+  getProject,
+  getSingleProject
   
 };

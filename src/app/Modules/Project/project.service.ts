@@ -8,14 +8,25 @@ const createProject = async (payload: any) => {
     })
  return project
 };
+
 const getProject = async () => {
 
     const data = await prisma.project.findMany()
     return data
 };
+const getSingleProject = async (id: any) => {
+    
+     const data = await prisma.project.findUniqueOrThrow({
+      where: {
+        id: id
+      }
+     })
+     return data
+};
 
 export const ProjectService = {
   createProject,
-  getProject
+  getProject,
+  getSingleProject
  
 };

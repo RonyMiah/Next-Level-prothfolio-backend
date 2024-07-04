@@ -11,10 +11,18 @@ router.post(
 //   validateRequest(userValidation.createUserSchemaValidation),
   ProjectControllers.createProject
 );
+
 router.get(
   '/',
 //   validateRequest(userValidation.createUserSchemaValidation),
   ProjectControllers.getProject
 );
+
+router.get(
+  '/:id',
+ //   validateRequest(userValidation.createUserSchemaValidation),
+  ProjectControllers.getSingleProject
+);
+
 
 export const projectRouter = router;
