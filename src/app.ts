@@ -10,7 +10,7 @@ app.use(
     origin: [
       'http://localhost:3000',
       'http://localhost:3001',
-      'https://lost-fount-client.vercel.app',
+      'https://prothfolio-nextjs.vercel.app'
     ],
     credentials: true,
   })
