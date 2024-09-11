@@ -10,7 +10,8 @@ app.use(
     origin: [
       'http://localhost:3000',
       'http://localhost:3001',
-      'https://prothfolio-nextjs.vercel.app'
+      'https://prothfolio-nextjs.vercel.app',
+      'https://www.ronymiah.com'
     ],
     credentials: true,
   })
