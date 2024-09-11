@@ -11,7 +11,9 @@ app.use(
       'http://localhost:3000',
       'http://localhost:3001',
       'https://prothfolio-nextjs.vercel.app',
+      'https://www.ronymiah.com',
       'https://ronymiah.com',
+  
     ],
     credentials: true,
   })
