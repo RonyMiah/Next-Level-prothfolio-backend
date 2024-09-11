@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-     "postinstall": "prisma generate",
-      "start": "node ./dist/server.js",
-     "build": "tsc",
+    "postinstall": "prisma generate",
+    "start": "node ./dist/server.js",
+    "build": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
   "dependencies": {
@@ -29,6 +29,8 @@
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.6",
+    "@types/markdown-it": "^14.1.2",
+    "@types/mdast": "^4.0.4",
     "ts-node-dev": "^2.0.0"
   }
 }
